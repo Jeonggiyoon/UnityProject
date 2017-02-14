@@ -14,6 +14,8 @@ public class ArrayMove8 : MonoBehaviour
     private float[] arrayY = { 0, 20, 20, 0 };
     private float[] arrayZ = { -40, -40, -50, -50 };
 
+    private float wait = 1.0f;
+
     // Use this for initialization
     void Start()
     {
@@ -29,6 +31,8 @@ public class ArrayMove8 : MonoBehaviour
 
     IEnumerator StartRutine()
     {
+        yield return new WaitForSeconds(wait); //1.0초간 실행을 보류한다.
+
         for (int i = 0; i <= node; i++)
         {
             if (tr.position.x < arrayX[i])

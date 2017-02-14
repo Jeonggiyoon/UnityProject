@@ -13,6 +13,8 @@ public class ArrayMove : MonoBehaviour {
     private float[] arrayY = {0, 10, 10, 0 };
     private float[] arrayZ = {0, 10, 10, 10 };
 
+    private float wait = 2.0f;
+
     // Use this for initialization
     void Start () {
         tr = GetComponent<Transform>();
@@ -27,6 +29,8 @@ public class ArrayMove : MonoBehaviour {
 
     IEnumerator StartRutine()
     {
+        yield return new WaitForSeconds(wait); //2.0초간 실행을 보류한다.
+
         for (int i = 0; i <= node; i++)
         {
             if (tr.position.x < arrayX[i])

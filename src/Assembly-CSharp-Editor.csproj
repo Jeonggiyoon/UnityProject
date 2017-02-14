@@ -46,10 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\LineParticle\Editor\CaptureScreenCamera.cs" />
-     <Compile Include="Assets\LineParticle\Editor\LineParticleEditor.cs" />
-     <Compile Include="Assets\Pixelplacement\iTweenPath\Editor\iTweenPathEditor.cs" />
-     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <Compile Include="Assets\Scripts\LineParticle\Editor\CaptureScreenCamera.cs" />
+     <Compile Include="Assets\Scripts\LineParticle\Editor\LineParticleEditor.cs" />
+     <Compile Include="Assets\Scripts\Pixelplacement\iTweenPath\Editor\iTweenPathEditor.cs" />
+     <None Include="Assets\Scripts\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -106,8 +106,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{E53CDB40-1DF9-8A61-5878-81243AFDF805}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{4CFFDA30-0E63-039E-0DCA-DAC117CE2649}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>

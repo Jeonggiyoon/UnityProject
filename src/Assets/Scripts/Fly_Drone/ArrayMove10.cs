@@ -8,11 +8,13 @@ public class ArrayMove10 : MonoBehaviour
     //private float fAngleY = 0.0f;
     private float fSpeed = 2.0f;
 
-    private float node = 3;
+    private float node = 3;   //x, y, z, 좌표의 노드 개수 ( 0~ 3까지 총 4개), 배열문의 반복횟수를 변수에 지정
 
-    private float[] arrayX = { 15, 15, 0, 0 };
-    private float[] arrayY = { 0, 10, 10, 0 };
-    private float[] arrayZ = { 0, 10, 0, 0 };
+    private float[] arrayX = { 15, 15, 0, 0 };    //x 좌표 배열 값
+    private float[] arrayY = { 0, 10, 10, 0 };    //y 좌표 배열 값
+    private float[] arrayZ = { 0, 10, 0, 0 };    // z 좌표 배열 값
+
+    private float wait = 1.0f;   // 딜레이 변수 
 
     // Use this for initialization
     void Start()
@@ -29,6 +31,8 @@ public class ArrayMove10 : MonoBehaviour
 
     IEnumerator StartRutine()
     {
+        yield return new WaitForSeconds(wait); //1.0초간 실행을 보류한다.
+
         for (int i = 0; i <= node; i++)
         {
             if (tr.position.x < arrayX[i])

@@ -10,9 +10,11 @@ public class ArrayMove3 : MonoBehaviour
 
     private float node = 3;
 
-    private float[] arrayX = { 30, 30, 25, 25 };
+    private float[] arrayX = { 30, 30, 25, 25 }; 
     private float[] arrayY = { 0, 20, 20, 0 };
     private float[] arrayZ = { 30, 30, 15, 15 };
+
+    private float wait = 3.0f;     
 
     // Use this for initialization
     void Start()
@@ -29,6 +31,7 @@ public class ArrayMove3 : MonoBehaviour
 
     IEnumerator StartRutine()
     {
+        yield return new WaitForSeconds(wait); //3.0초간 실행을 보류한다.
         for (int i = 0; i <= node; i++)
         {
             if (tr.position.x < arrayX[i])

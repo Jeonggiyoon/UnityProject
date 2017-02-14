@@ -46,12 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\LineParticle\Scripts\CameraRotate.cs" />
-     <Compile Include="Assets\LineParticle\Scripts\LineParticle.cs" />
-     <Compile Include="Assets\LineParticle\Scripts\Test.cs" />
-     <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraCtrl.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraJoin.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraMove.cs" />
      <Compile Include="Assets\Scripts\Drone\Component.cs" />
      <Compile Include="Assets\Scripts\Drone\ControlReceiver.cs" />
      <Compile Include="Assets\Scripts\Drone\ControlSignal.cs" />
@@ -74,7 +73,16 @@
      <Compile Include="Assets\Scripts\Fly_Drone\AutoMove.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\Move.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\PathMove.cs" />
-     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <Compile Include="Assets\Scripts\LineParticle\Scripts\CameraRotate.cs" />
+     <Compile Include="Assets\Scripts\LineParticle\Scripts\LineParticle.cs" />
+     <Compile Include="Assets\Scripts\LineParticle\Scripts\Test.cs" />
+     <Compile Include="Assets\Scripts\Pixelplacement\iTweenPath\iTweenPath.cs" />
+     <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\MoveTo.cs" />
+     <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
+     <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
+     <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
+     <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\iTween.cs" />
+     <None Include="Assets\Scripts\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -93,10 +101,6 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{E53CDB40-1DF9-8A61-5878-81243AFDF805}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
