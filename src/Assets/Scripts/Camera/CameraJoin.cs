@@ -12,7 +12,7 @@ public class CameraJoin : MonoBehaviour {
     public float TurnSpeed;
     public float camPos;
 
-    Vector3 V3;
+    // Vector3 V3;
 
     private Transform tr;
 
@@ -40,9 +40,7 @@ public class CameraJoin : MonoBehaviour {
 
 
     void moveObject()
-
     {
-
         float keyHorizontal = Input.GetAxis("Horizontal");
 
         float keyVertical = Input.GetAxis("Vertical");

@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour {
     public float TurnSpeed;
     public float camPos;
 
-    Vector3 V3;
+    //Vector3 V3;
 
     private Transform tr;
     // Use this for initialization
