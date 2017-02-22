@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\Fly_Drone\AutoMove.cs" />
     <Compile Include="Assets\Scripts\Fly_Drone\Move.cs" />
     <Compile Include="Assets\Scripts\Fly_Drone\PathMove.cs" />
+    <Compile Include="Assets\Scripts\Fly_Drone\SpawnerManager.cs" />
     <Compile Include="Assets\Scripts\Pixelplacement\iTweenPath\iTweenPath.cs" />
     <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\MoveTo.cs" />
     <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
