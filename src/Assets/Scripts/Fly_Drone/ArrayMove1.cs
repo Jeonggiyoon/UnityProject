@@ -10,9 +10,9 @@ public class ArrayMove1 : MonoBehaviour
 
     private float node = 3;
 
-    private float[] arrayX = { 10, 10, 20, 20 };
+    private float[] arrayX = { 10, 10, 10, 10 };
     private float[] arrayY = { 0, 10, 10, 0 };
-    private float[] arrayZ = { 10, 10, 20, 20 };
+    private float[] arrayZ = { 0, 0, 10, 10 };
 
     private float wait = 4.0f;
 
