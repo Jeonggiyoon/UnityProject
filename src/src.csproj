@@ -102,9 +102,9 @@
     <Compile Include="Assets\Scripts\Fly_Drone\AutoMove.cs" />
     <Compile Include="Assets\Scripts\Fly_Drone\Move.cs" />
     <Compile Include="Assets\Scripts\Fly_Drone\PathMove.cs" />
-    <Compile Include="Assets\Scripts\LineParticle\Scripts\CameraRotate.cs" />
-    <Compile Include="Assets\Scripts\LineParticle\Scripts\LineParticle.cs" />
-    <Compile Include="Assets\Scripts\LineParticle\Scripts\Test.cs" />
+    <Compile Include="Assets\Scripts\Fly_Drone\SelfMove.cs" />
+    <Compile Include="Assets\Scripts\Fly_Drone\Spawn.cs" />
+    <Compile Include="Assets\Scripts\Fly_Drone\SpawnerManager.cs" />
     <Compile Include="Assets\Scripts\Pixelplacement\iTweenPath\iTweenPath.cs" />
     <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\MoveTo.cs" />
     <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
@@ -114,7 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
-    <None Include="Assets\dssdgdgs.txt" />
+    <None Include="Assets\path_1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

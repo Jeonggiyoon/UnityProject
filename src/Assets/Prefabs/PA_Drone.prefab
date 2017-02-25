@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114561162931711526}
   - component: {fileID: 82683436057435314}
   - component: {fileID: 114491643098726866}
+  - component: {fileID: 114763464449429116}
   m_Layer: 0
   m_Name: PA_Drone
   m_TagString: Untagged
@@ -404,7 +405,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 90
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!82 &82683436057435314
 AudioSource:
@@ -607,7 +608,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283879060130468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e3fd4ad8476ac342af64c2db89bf78e, type: 3}
   m_Name: 
@@ -631,6 +632,22 @@ MonoBehaviour:
   - {x: 10, y: 10, z: 0}
   - {x: 10, y: 10, z: 10}
   - {x: 10, y: 0, z: 10}
+  wait: 2
+--- !u!114 &114763464449429116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283879060130468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5903e4c490e8d4ba5da22eb72fc314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tr: {fileID: 0}
+  fSpeed: 2
+  textFile: {fileID: 0}
+  vectors: []
   wait: 2
 --- !u!135 &135585869105679994
 SphereCollider:
