@@ -13,9 +13,14 @@ public class SelfMove : MonoBehaviour
 
     //public Vector3[] vectors;   //백터 배열 
 
-    public float wait = 2.0f;
+    public float wait = Random.Range(0f, 10f);
 
-    float randomY = Random.Range(0f, 20f); //적이 나타날 Z좌표를 랜덤으로 생성해 줍니다.
+    float randomY = Random.Range(5f, 30f); //적이 나타날 Z좌표를 랜덤으로 생성해 줍니다.
+    float randomX = Random.Range(-30f, 30f);
+    float randomZ = Random.Range(-30f, 30f);
+    float landing = 0.0f;
+
+    
 
     // Use this for initialization
     void Start()
@@ -38,13 +43,37 @@ public class SelfMove : MonoBehaviour
         //transform.Translate(Vector3.up, Space.Self);
         //yield return null;
 
-            yield return new WaitForSeconds(wait); //2.0초간 실행을 보류한다.
+         yield return new WaitForSeconds(wait); //2.0초간 실행을 보류한다.
 
-            while (tr.localPosition.y <=  randomY)
-            {
-                transform.Translate(0, randomY * fSpeed * Time.deltaTime, 0, Space.Self); 
-                yield return null;
-            }
+         while (tr.localPosition.y <=  randomY)
+         {
+              transform.Translate(0, randomY * fSpeed * Time.deltaTime, 0, Space.Self); 
+              //yield return null;
+         }
+
+        yield return new WaitForSeconds(wait); //2.0초간 실행을 보류한다.
+
+        while (tr.localPosition.x <= randomX)
+        {
+            transform.Translate(randomX * fSpeed * Time.deltaTime, 0, 0, Space.Self);
+            //yield return null;
+        }
+
+        yield return new WaitForSeconds(wait); //2.0초간 실행을 보류한다.
+
+        while (tr.localPosition.z <= randomZ)
+        {
+            transform.Translate(0, 0, randomZ * fSpeed * Time.deltaTime,  Space.Self);
+            //yield return null;
+        }
+
+        yield return new WaitForSeconds(wait); //2.0초간 실행을 보류한다.
+
+        while (tr.localPosition.y >= landing )
+        {
+            transform.Translate(Vector3.down, Space.Self);
+            //yield return null;
+        }
 
     }
 }

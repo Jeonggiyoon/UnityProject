@@ -418,9 +418,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 332390bce16334b41b9204c58bc1a422, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.55
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -644,10 +644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5903e4c490e8d4ba5da22eb72fc314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tr: {fileID: 0}
+  tr: {fileID: 4196018342775872}
   fSpeed: 2
-  textFile: {fileID: 0}
-  vectors: []
   wait: 2
 --- !u!135 &135585869105679994
 SphereCollider:
