@@ -10,9 +10,11 @@ public class ArrayMove1 : MonoBehaviour
 
     private float node = 3;
 
-    private float[] arrayX = { 10, 10, 10, 10 };
-    private float[] arrayY = { 0, 10, 10, 0 };
-    private float[] arrayZ = { 0, 0, 10, 10 };
+    //private float[] arrayX = { 10, 10, 10, 10 };
+    //private float[] arrayY = { 0, 10, 10, 0 };
+    //private float[] arrayZ = { 0, 0, 10, 10 };
+
+    private float[,] locationxyz = { { 10, 0, 0 }, { 10, 10, 0 }, { 10, 10, 10 }, { 10, 0, 10 } };
 
     private float wait = 4.0f;
 
@@ -35,65 +37,65 @@ public class ArrayMove1 : MonoBehaviour
 
         for (int i = 0; i <= node; i++)
         {
-            if (tr.position.x < arrayX[i])
+            if (tr.position.x < locationxyz[i,0])
             {
-                while (tr.position.x <= arrayX[i])
+                while (tr.position.x <= locationxyz[i,0])
                 {
                     tr.position += tr.right * fSpeed * Time.deltaTime;
                     yield return null;
                 }
             }
-            else if (tr.position.x > arrayX[i])
+            else if (tr.position.x > locationxyz[i,0])
             {
-                while (tr.position.x >= arrayX[i])
+                while (tr.position.x >= locationxyz[i,0])
                 {
                     tr.position -= tr.right * fSpeed * Time.deltaTime;
                     yield return null;
                 }
             }
-            else if (tr.position.x == arrayX[i])
+            else if (tr.position.x == locationxyz[i,0])
             {
                 yield return null;
             }
 
-            if (tr.position.y < arrayY[i])
+            if (tr.position.y < locationxyz[i,1])
             {
-                while (tr.position.y <= arrayY[i])
+                while (tr.position.y <= locationxyz[i,1])
                 {
                     tr.position += tr.up * fSpeed * Time.deltaTime;
                     yield return null;
                 }
             }
-            else if (tr.position.y > arrayY[i])
+            else if (tr.position.y > locationxyz[i,1])
             {
-                while (tr.position.y >= arrayY[i])
+                while (tr.position.y >= locationxyz[i,1])
                 {
                     tr.position -= tr.up * fSpeed * Time.deltaTime;
                     yield return null;
                 }
             }
-            else if (tr.position.y == arrayY[i])
+            else if (tr.position.y == locationxyz[i,1])
             {
                 yield return null;
             }
 
-            if (tr.position.z < arrayZ[i])
+            if (tr.position.z < locationxyz[i,2])
             {
-                while (tr.position.z <= arrayZ[i])
+                while (tr.position.z <= locationxyz[i,2])
                 {
                     tr.position += tr.forward * fSpeed * Time.deltaTime;
                     yield return null;
                 }
             }
-            else if (tr.position.z > arrayZ[i])
+            else if (tr.position.z > locationxyz[i,2])
             {
-                while (tr.position.z >= arrayZ[i])
+                while (tr.position.z >= locationxyz[i,2])
                 {
                     tr.position -= tr.forward * fSpeed * Time.deltaTime;
                     yield return null;
                 }
             }
-            else if (tr.position.z == arrayZ[i])
+            else if (tr.position.z == locationxyz[i,2])
             {
                 yield return null;
             }

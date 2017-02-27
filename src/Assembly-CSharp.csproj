@@ -70,9 +70,12 @@
      <Compile Include="Assets\Scripts\Fly_Drone\ArrayMove7.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\ArrayMove8.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\ArrayMove9.cs" />
+     <Compile Include="Assets\Scripts\Fly_Drone\ArrayProf.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\AutoMove.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\Move.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\PathMove.cs" />
+     <Compile Include="Assets\Scripts\Fly_Drone\SelfMove.cs" />
+     <Compile Include="Assets\Scripts\Fly_Drone\Spawn.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\SpawnerManager.cs" />
      <Compile Include="Assets\Scripts\Pixelplacement\iTweenPath\iTweenPath.cs" />
      <Compile Include="Assets\Scripts\Plugins\Pixelplacement\iTween\MoveTo.cs" />

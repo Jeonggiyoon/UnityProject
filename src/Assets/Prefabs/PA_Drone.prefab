@@ -61,6 +61,8 @@ GameObject:
   - component: {fileID: 82683436057435314}
   - component: {fileID: 114491643098726866}
   - component: {fileID: 114763464449429116}
+  - component: {fileID: 114473079322795184}
+  - component: {fileID: 114398914725485008}
   m_Layer: 0
   m_Name: PA_Drone
   m_TagString: Untagged
@@ -154,14 +156,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283879060130468}
-  m_LocalRotation: {x: 0, y: 0.046147585, z: 0, w: 0.9989346}
-  m_LocalPosition: {x: 0, y: -0.33, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4101495042799978}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 5.29, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4841654567148464
 Transform:
   m_ObjectHideFlags: 1
@@ -413,7 +415,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283879060130468}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 332390bce16334b41b9204c58bc1a422, type: 3}
@@ -494,7 +496,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283879060130468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -602,6 +604,34 @@ TrailRenderer:
     textureMode: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
+--- !u!114 &114398914725485008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283879060130468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3515471ff043ba4d88d8cc6b0770678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpawn: 0
+  obj: {fileID: 0}
+  path_no: 0
+--- !u!114 &114473079322795184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283879060130468}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3515471ff043ba4d88d8cc6b0770678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpawn: 0
+  obj: {fileID: 0}
+  path_no: 0
 --- !u!114 &114491643098726866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -639,7 +669,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283879060130468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd5903e4c490e8d4ba5da22eb72fc314, type: 3}
   m_Name: 
@@ -655,7 +685,7 @@ SphereCollider:
   m_GameObject: {fileID: 1283879060130468}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
