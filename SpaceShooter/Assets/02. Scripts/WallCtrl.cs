@@ -13,8 +13,12 @@ public class WallCtrl : MonoBehaviour {
         // 충돌한 게임오브젝트의 태그값 비교 
         if (coll.collider.tag == "BULLET")
         {
-            // 스파크 파티클을 동적으로 생성
-            Instantiate(sparkEffect, coll.transform.position, Quaternion.identity);
+            // 스파크 파티클을 동적으로 생성하고 변수에 할당
+            GameObject spark = (GameObject) Instantiate(sparkEffect, coll.transform.position, Quaternion.identity);
+
+            // ParticleSystem 컴포넌트의 수행시간 (Duration)이 지난 후 삭제 처리
+            //Destroy(spark, spark.GetComponent<ParticleSystem>().duration + 0.2f);
+            Destroy(spark, 0.5f);
 
             // 충돌한 게임오브젝트 삭제
             Destroy(coll.gameObject);
