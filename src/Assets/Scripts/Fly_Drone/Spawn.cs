@@ -26,8 +26,10 @@ public class Spawn : MonoBehaviour {
     }
     void Start()
     {
+        //ArrayProf.locationxyz[0];
+
         //GameObject.Find("Spawn").GetComponent("ArrayProf").func1();
-        // GetComponent("ArrayProf").func1();
+        //GetComponent("ArrayProf").func1();
         // GameObject.Find("ArrayPof").SendMessage("func1", 0);
         gameObject.SendMessage("func1", 0);
         //Script = GetComponent("ArrayProf");

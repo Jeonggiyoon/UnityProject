@@ -20,10 +20,12 @@ public class ArrayProf : MonoBehaviour
     //private float[] arrayZ = { 0, 0, 10, 10 };
 
     // private float[,] locationxyz = { { 10, 0, 0 }, { 10, 10, 0 }, { 10, 10, 10 }, { 10, 0, 10 }  };
-    private float[,,] locationxyz = { { { 10, 0, 0 }, { 10, 10, 0 }, { 10, 10, 10 }, { 10, 0, 10 } },
+    public static float[,,] locationxyz = { { { 10, 0, 0 }, { 10, 10, 0 }, { 10, 10, 10 }, { 10, 0, 10 } },
                                       { { 20, 0, 0 }, { 20, 10, 0 }, { 200, 10, 10 }, { 20, 0, 10 } } };
 
-    
+
+    public Transform[] nodes;
+
     private float wait = 4.0f;
 
     public void func1( int i)
@@ -35,7 +37,7 @@ public class ArrayProf : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+        //nodes[0].position;
         tr = GetComponent<Transform>();
      
 
