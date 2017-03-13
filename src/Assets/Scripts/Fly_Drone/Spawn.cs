@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour {
 
-    public bool enableSpawn = false;
+    public bool enableSpawn = true;
     public GameObject obj; //Prefab을 받을 public 변수 입니다.
+    public float objNumber = 5;
 
     //ArrayProf other; //데이터 타입은 사용할 스크립트 명
     //other = gameObject.GetComponent("ArrayProf") as ScriptName;
@@ -21,7 +22,10 @@ public class Spawn : MonoBehaviour {
         
         if (enableSpawn)
         {
-            GameObject enemy = (GameObject)Instantiate(obj, new Vector3(0f, 0f, 0f), Quaternion.identity); //랜덤한 위치와, 화면 제일 위에서 Enemy를 하나 생성해줍니다.
+            for (int i = 0; i < objNumber; i++)
+            {
+                GameObject enemy = (GameObject)Instantiate(obj, new Vector3(0f, 0f, 0f), Quaternion.identity); //랜덤한 위치와, 화면 제일 위에서 Enemy를 하나 생성해줍니다.
+            }
         }
     }
     void Start()
@@ -31,20 +35,20 @@ public class Spawn : MonoBehaviour {
         //GameObject.Find("Spawn").GetComponent("ArrayProf").func1();
         //GetComponent("ArrayProf").func1();
         // GameObject.Find("ArrayPof").SendMessage("func1", 0);
-        gameObject.SendMessage("func1", 0);
+        //gameObject.SendMessage("func1", 0);
         //Script = GetComponent("ArrayProf");
 
         // GetComponent("ArrayProf").func1();
 
-        SpawnEnemy();
+        //SpawnEnemy();
 
 
         //GameObject.Find("ArrayPof").SendMessage("func1", 1);
-        gameObject.SendMessage("func1", 1);
+        //gameObject.SendMessage("func1", 1);
 
         SpawnEnemy();
         
-       //InvokeRepeating("SpawnEnemy", 3, 3); //3초후 부터, SpawnEnemy함수를 1초마다 반복해서 실행 시킵니다.
+       // InvokeRepeating("SpawnEnemy", 3, 3); //3초후 부터, SpawnEnemy함수를 1초마다 반복해서 실행 시킵니다.
     }
     void Update()
     {

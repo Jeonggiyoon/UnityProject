@@ -17,34 +17,41 @@ public class SpawnerManager : MonoBehaviour {
     void Start () {
         // CreatePositions();
         StartCoroutine("SpawnDrone", 2);
+         //InvokeRepeating("SpawnDrone", 1, 1);
 
     }
 
     // Update is called once per frame
     void Update () {
+        //StartCoroutine("SpawnDrone", 2);
         // SpawnDrone();
         //StartCoroutine("SpawnDrone", functionDelay);
     }
 
     IEnumerator SpawnDrone()
     {
-         // yield return new WaitForSeconds(wait); //4.0초간 실행을 보류한다.
+        // yield return new WaitForSeconds(wait); //4.0초간 실행을 보류한다.
+        int i = 0;
 
-        for (int i = 0; i < spawnNumber; i++)
+        if (isSpawn == true)
         {
-            if (isSpawn == true)
+            if (i < spawnNumber)
             {
-                if (spawnTimer > spawnDelay)
+                for (; i < spawnNumber; i++)
                 {
-                    int rand = Random.Range(0, positions.Length);
-                    Instantiate(obj, positions[rand], Quaternion.identity);
-                    spawnTimer = 0f;
+                    if (spawnTimer > spawnDelay)
+                    {
+                        int rand = Random.Range(0, positions.Length);
+                        Instantiate(obj, positions[rand], Quaternion.identity);
+                        spawnTimer = 0f;
+                    }
+                    spawnTimer += Time.deltaTime;
                 }
-                spawnTimer += Time.deltaTime;
-            }          
+            }
+            yield return null;
         }
-        yield return null;
     }
+
 
     /*
     void CreatePositions()

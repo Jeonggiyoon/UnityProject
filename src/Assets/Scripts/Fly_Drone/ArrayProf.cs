@@ -12,7 +12,7 @@ public class ArrayProf : MonoBehaviour
 
     private float node = 3;
 
-    public int path_no;
+    public static int path_no;
 
     
     //private float[] arrayX = { 10, 10, 10, 10 };

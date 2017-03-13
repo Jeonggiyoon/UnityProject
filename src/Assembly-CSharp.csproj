@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\Fly_Drone\Move.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\PathMove.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\SelfMove.cs" />
+     <Compile Include="Assets\Scripts\Fly_Drone\SpaceSpawn.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\Spawn.cs" />
      <Compile Include="Assets\Scripts\Fly_Drone\SpawnerManager.cs" />
      <Compile Include="Assets\Scripts\Pixelplacement\iTweenPath\iTweenPath.cs" />
